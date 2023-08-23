@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>job List</title>
+    <style>
+      .gradient {
+        background: #3429cf;
+        background: linear-gradient(to right, #3429cf 0%, #32cf7b 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark shadow">
+      <div class="container-fluid p-2">
+        <a class="navbar-brand gradient" href="#">EMS2.0</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="dash.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="employeeslist.html">Employees</a>
+            </li>
+            <li class="nav-item">
+              <a href="job.html" class="nav-link active">Jobs</a>
+            </li>
+          </ul>
+          <form class="d-flex gap-3">
+            <div class="input-group">
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Search for..."
+                aria-label="Search"
+              /><button
+                class="btn btn-outline-success bg-success"
+                type="button"
+                data-mdb-ripple-color="dark"
+              >
+                <i class="fa-solid fa-magnifying-glass text-white"></i>
+              </button>
+            </div>
+            <div class="vr text-white"></div>
+            <a
+              class="btn btn-outline-success bg-warning"
+              data-mdb-ripple-color="dark"
+              href="index.html"
+            >
+              <i class="fa-solid fa-power-off text-black"></i>
+            </a>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-2">
+          <ul class="list-group mb-4 shadow">
+            <li class="list-group-item active">Job Data</li>
+            <a
+              class="list-group-item list-group-item-action"
+              href=""
+              data-bs-toggle="modal"
+              data-bs-target="#modal-add"
+            >
+              Add job
+            </a>
+          </ul>
+          <ul class="list-group mb-3 shadow">
+            <li class="list-group-item active">Related Links</li>
+            <a
+              href="employeeslist.html"
+              class="list-group-item list-group-item-action"
+              >Employees List</a
+            >
+          </ul>
+        </div>
+        <div class="col-md-8">
+          <table class="table table-bordered caption-top">
+            <caption class="bg-dark text-center text-light rounded-top">
+              Job Lists
+            </caption>
+            <thead class="table-secondary">
+              <tr>
+                <th scope="col">ID</th>
+
+                <th scope="col">Name</th>
+
+                <th scope="col">Details</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody class="align-middle">
+              <tr>
+                <th scope="row">1</th>
+                <td>Graphic Design</td>
+                <td>
+                  <a
+                    href="#"
+                    class="btn border-0 btn-primary d-block"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-details"
+                  >
+                    Details
+                  </a>
+                </td>
+                <td>
+                  <a
+                    href=""
+                    class="btn border-0 btn-warning d-block"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-edit"
+                  >
+                    Edit
+                  </a>
+                </td>
+                <td>
+                  <a
+                    href=""
+                    class="btn border-0 btn-danger d-block"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-delete"
+                  >
+                    Delete
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Web Design</td>
+                <td>
+                  <a
+                    href=""
+                    class="btn border-0 btn-primary d-block"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-details"
+                  >
+                    Details
+                  </a>
+                </td>
+                <td>
+                  <a
+                    href=""
+                    class="btn border-0 btn-warning d-block"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-edit"
+                  >
+                    Edit
+                  </a>
+                </td>
+                <td>
+                  <a
+                    href=""
+                    class="btn border-0 btn-danger d-block"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-delete"
+                  >
+                    Delete
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Flutter</td>
+                <td>
+                  <a
+                    class="btn border-0 btn-primary d-block"
+                    href=""
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-details"
+                  >
+                    Details
+                  </a>
+                </td>
+                <td>
+                  <a
+                    href=""
+                    class="btn border-0 btn-warning d-block"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-edit"
+                  >
+                    Edit
+                  </a>
+                </td>
+                <td>
+                  <a
+                    href=""
+                    class="btn border-0 btn-danger d-block"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-delete"
+                  >
+                    Delete
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal job -->
+    <div
+      class="modal fade"
+      id="modal-add"
+      style="backdrop-filter: blur(5px)"
+      data-bs-backdrop="static"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header text-bg-dark">
+            <h5 class="modal-title">Add Job Details</h5>
+            <button
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="" class="">
+              <input type="date" class="form-control" />
+              <input
+                type="text"
+                class="form-control mt-4"
+                placeholder="Job Name"
+              />
+              <div class="d-flex justify-content-between"></div>
+              <button class="btn btn-success mt-4 w-75">Add Job</button>
+              <button
+                class="btn btn-warning mt-4 ms-1"
+                data-bs-dismiss="modal"
+                style="width: 23%"
+              >
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="modal-details"
+      style="backdrop-filter: blur(5px)"
+      data-bs-backdrop="static"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header text-bg-dark">
+            <h5 class="modal-title">Job Details</h5>
+            <button
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body p-0 m-0">
+            <table class="table table-bordered mb-0">
+              <tr>
+                <th class="w-50">ID</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>Job Name</th>
+                <td>Flutter</td>
+              </tr>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <div class="d-flex justify-content-end">
+              <button
+                class="btn btn-warning"
+                data-bs-target="#modal-edit"
+                data-bs-toggle="modal"
+              >
+                Edit Details
+              </button>
+              <button class="btn btn-primary ms-2" data-bs-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="modal-edit"
+      style="backdrop-filter: blur(5px)"
+      data-bs-backdrop="static"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header text-bg-dark">
+            <h5 class="modal-title">Job Details</h5>
+            <button
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="" class="">
+              <input type="date" class="form-control" value="2023-12-09" />
+              <input
+                type="text"
+                class="form-control mt-4"
+                placeholder="Job Name"
+                value="Flutter"
+              />
+              <div class="d-flex mt-4">
+                <button class="btn btn-success me-3 w-100">Update Job</button>
+                <button class="btn btn-warning" data-bs-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="modal-delete"
+      style="backdrop-filter: blur(5px)"
+      data-bs-backdrop="static"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <label class="modal-title fs-5"
+              >Do you want to delete the job<strong>"Flutter"</strong> ?</label
+            >
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center">
+              <button class="btn btn-danger btn-sm">Yes!</button>
+              <button class="btn btn-warning btn-sm" data-bs-dismiss="modal">
+                Nope, Go back
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

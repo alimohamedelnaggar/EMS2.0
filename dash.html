@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Dash</title>
+    <style>
+      .gradient {
+        background: #3429cf;
+        background: linear-gradient(to right, #3429cf 0%, #32cf7b 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark shadow">
+      <div class="container-fluid p-2">
+        <a class="navbar-brand gradient" href="#">EMS2.0</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="dash.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="employeeslist.html">Employees</a>
+            </li>
+            <li class="nav-item">
+              <a href="job.html" class="nav-link">Jobs</a>
+            </li>
+          </ul>
+          <form class="d-flex gap-3">
+            <div class="input-group">
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Search for..."
+                aria-label="Search"
+              /><button
+                class="btn btn-outline-success bg-success"
+                type="button"
+                data-mdb-ripple-color="dark"
+              >
+                <i class="fa-solid fa-magnifying-glass text-white"></i>
+              </button>
+            </div>
+            <div class="vr text-white"></div>
+            <a
+              class="btn btn-outline-success bg-warning"
+              data-mdb-ripple-color="dark"
+              href="index.html"
+            >
+              <i class="fa-solid fa-power-off text-black"></i>
+            </a>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-3">
+          <div class="card text-bg-primary text-center mb-3">
+            <div class="card-header">Employees List</div>
+            <div class="card-body">
+              <label class="card-text fs-1">254+</label>
+            </div>
+            <div class="card-footer">
+              <a
+                class="text-decoration-none d-block text-white"
+                href="employeeslist.html"
+              >
+                view employees
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-bg-primary text-center">
+            <div class="card-header">Jobs List</div>
+            <div class="card-body">
+              <label class="card-text fs-1">25+</label>
+            </div>
+            <div class="card-footer">
+              <a
+                class="text-decoration-none text-white d-block"
+                href="job.html"
+              >
+                view Jobs list
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
